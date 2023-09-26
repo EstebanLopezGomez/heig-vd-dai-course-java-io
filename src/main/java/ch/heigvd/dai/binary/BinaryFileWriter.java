@@ -14,13 +14,5 @@ public class BinaryFileWriter implements Writable {
         // TODO : implement this method
         FileOutputStream outputStream = new FileOutputStream(filename);
         outputStream.write(sizeInBytes);
-        //throw new UnsupportedOperationException("Not implemented yet");
-    }
-
-    public void write_byte_per_byte(String filename, int sizeInBytes) throws IOException {
-        // TODO : implement this method
-        FileOutputStream outputStream = new FileOutputStream(filename);
-        outputStream.write(sizeInBytes);
-        //throw new UnsupportedOperationException("Not implemented yet");
     }
 }

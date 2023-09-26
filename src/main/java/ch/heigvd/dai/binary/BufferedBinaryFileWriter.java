@@ -2,15 +2,16 @@ package ch.heigvd.dai.binary;
 
 import ch.heigvd.dai.Writable;
 
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import javax.imageio.stream.FileImageOutputStream;
+import java.io.*;
 
 public class BufferedBinaryFileWriter implements Writable {
 
     @Override
     public void write(String filename, int sizeInBytes) throws IOException {
-        // TODO : implement this method
-        throw new UnsupportedOperationException("Not implemented yet");
+        OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(filename));
+        byte[] buffer = new byte[16384]; //16kB buffer size
+
+        outputStream.write(buffer,0,sizeInBytes);
     }
 }
